@@ -22,8 +22,13 @@ Vagrant.configure(2) do |config|
   ######################################################
 
   config.vm.provision "ansible" do |ansible|
+
     #ansible.verbose = "v"
     ansible.playbook = "infra-as-code.yml"
     ansible.become = "yes"
     ansible.become_user = "root"
   end
+  ######################################################
+
+end
+  
