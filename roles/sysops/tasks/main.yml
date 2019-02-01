@@ -39,14 +39,6 @@
   with_fileglob:
     - "html/*"
 
-- shell: 'cat /home/ubuntu/.ssh/id_rsa'
-  register: rsakey
-- debug:
-    msg:
-    - "The secret rsa key for the ubuntu user is:"
-    - "{{ rsakey.stdout }}"
-  become: yes
-  become_user: root
 
 - name: "Print the IP addr / URL:"
   vars:
